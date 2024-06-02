@@ -1,5 +1,5 @@
-import { campaigns } from '../../data/campaigns';
-import { validateCampaign, updateCampaignStatus } from '../../../utils/validators';
+import { campaigns } from '../../../data/campaigns';
+import { validateCampaign, updateCampaignStatus } from '../../../utils/validator';
 
 export default function handler(req, res) {
   const { id } = req.query;

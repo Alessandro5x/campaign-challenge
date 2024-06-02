@@ -1,1 +1,1 @@
-export const campaigns = ["Campanha de marketing"];
+export const campaigns = [];
