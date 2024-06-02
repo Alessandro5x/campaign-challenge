@@ -6,9 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "test": "jest",
     "lint": "next lint"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.19.2",
     "joi": "^17.13.1",
     "next": "14.2.3",
@@ -25,6 +27,7 @@
     "eslint-config-next": "14.2.3",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "typescript": "^5",
+    "jest": "^26.6.3"
   }
 }
