@@ -1,4 +1,4 @@
-import { campaigns } from '../../../data/campaigns';
+import { campaigns } from '../../data/campaigns';
 import { validateCampaign, updateCampaignStatus } from '../../../utils/validators';
 
 export default function handler(req, res) {

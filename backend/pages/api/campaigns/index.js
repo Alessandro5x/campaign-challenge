@@ -1,5 +1,5 @@
 import { campaigns } from '../../../data/campaigns';
-import { validateCampaign, updateCampaignStatus } from '../../../utils/validators';
+import { validateCampaign } from '../../../utils/validator';
 
 export default function handler(req, res) {
   if (req.method === 'GET') {
