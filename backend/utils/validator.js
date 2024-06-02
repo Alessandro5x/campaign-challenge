@@ -1,6 +1,6 @@
-import Joi from 'joi';
+const Joi = require('joi');
 
-export const validateCampaign = (campaign) => {
+const validateCampaign = (campaign) => {
   const schema = Joi.object({
     nome: Joi.string().required(),
     dataInicio: Joi.date().min('now').required(),
@@ -12,8 +12,10 @@ export const validateCampaign = (campaign) => {
   return schema.validate(campaign);
 };
 
-export const updateCampaignStatus = (campaign) => {
+const updateCampaignStatus = (campaign) => {
   if (new Date(campaign.dataFim) < new Date()) {
     campaign.status = 'expirada';
   }
 };
+
+module.exports = { validateCampaign, updateCampaignStatus };

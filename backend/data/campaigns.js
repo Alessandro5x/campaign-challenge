@@ -1,1 +1,2 @@
-export const campaigns = [];
+const campaigns = [];
+module.exports = { campaigns };

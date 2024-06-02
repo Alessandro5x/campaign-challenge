@@ -12,6 +12,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.19.2",
+    "fs": "^0.0.1-security",
     "joi": "^17.13.1",
     "next": "14.2.3",
     "react": "^18",
@@ -27,7 +28,12 @@
     "eslint-config-next": "14.2.3",
     "jest": "^26.6.3",
     "postcss": "^8",
+    "supertest": "^7.0.0",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {}
   }
 }
