@@ -1,5 +1,3 @@
-Claro! Aqui está um exemplo de `README.md` para a raiz do projeto, que contém links para os `README.md` específicos das pastas `backend` e `frontend`.
-
 # Campaign Challenge
 
 ## Descrição
