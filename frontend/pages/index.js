@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import axios from '../utils/axios';
 import Link from 'next/link';
+import { Button, List, ListItem, ListItemText, Typography } from '@mui/material';
+import Layout from '../components/Layout';
 
 export default function Home() {
   const [campaigns, setCampaigns] = useState([]);
@@ -12,16 +14,24 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
-      <h1>Campaigns</h1>
-      <Link href="/new">Create New Campaign</Link>
-      <ul>
+    <Layout>
+      <Typography variant="h4" gutterBottom>
+        Campaigns
+      </Typography>
+      <Link href="/new" passHref>
+        <Button variant="contained" color="primary" sx={{ mb: 2 }}>
+          Create New Campaign
+        </Button>
+      </Link>
+      <List>
         {campaigns.map(campaign => (
-          <li key={campaign.id}>
-            <Link href={`/campaign/${campaign.id}`}>{campaign.nome}</Link>
-          </li>
+          <Link key={campaign.id} href={`/campaign/${campaign.id}`} passHref>
+            <ListItem button>
+              <ListItemText primary={campaign.nome} />
+            </ListItem>
+          </Link>
         ))}
-      </ul>
-    </div>
+      </List>
+    </Layout>
   );
 }

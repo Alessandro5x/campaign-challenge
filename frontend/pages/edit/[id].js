@@ -1,6 +1,14 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import axios from 'axios';
+import { Button, TextField, MenuItem, Typography, Box } from '@mui/material';
+import Layout from '../../components/Layout';
+
+const statuses = [
+  { value: 'ativa', label: 'Active' },
+  { value: 'pausada', label: 'Paused' },
+  { value: 'expirada', label: 'Expired' },
+];
 
 export default function EditCampaign() {
   const router = useRouter();
@@ -34,20 +42,73 @@ export default function EditCampaign() {
   };
 
   return (
-    <div>
-      <h1>Edit Campaign</h1>
+    <Layout>
+      <Typography variant="h4" gutterBottom>
+        Edit Campaign
+      </Typography>
       <form onSubmit={handleSubmit}>
-        <input type="text" name="nome" value={campaign.nome} onChange={handleChange} placeholder="Name" required />
-        <input type="date" name="dataInicio" value={campaign.dataInicio} onChange={handleChange} required />
-        <input type="date" name="dataFim" value={campaign.dataFim} onChange={handleChange} required />
-        <select name="status" value={campaign.status} onChange={handleChange}>
-          <option value="ativa">Active</option>
-          <option value="pausada">Paused</option>
-          <option value="expirada">Expired</option>
-        </select>
-        <input type="text" name="categoria" value={campaign.categoria} onChange={handleChange} placeholder="Category" required />
-        <button type="submit">Update</button>
+        <TextField
+          label="Name"
+          name="nome"
+          value={campaign.nome}
+          onChange={handleChange}
+          fullWidth
+          required
+          margin="normal"
+        />
+        <TextField
+          label="Start Date"
+          type="date"
+          name="dataInicio"
+          value={campaign.dataInicio}
+          onChange={handleChange}
+          fullWidth
+          required
+          InputLabelProps={{ shrink: true }}
+          margin="normal"
+        />
+        <TextField
+          label="End Date"
+          type="date"
+          name="dataFim"
+          value={campaign.dataFim}
+          onChange={handleChange}
+          fullWidth
+          required
+          InputLabelProps={{ shrink: true }}
+          margin="normal"
+        />
+        <TextField
+          label="Status"
+          name="status"
+          value={campaign.status}
+          onChange={handleChange}
+          select
+          fullWidth
+          required
+          margin="normal"
+        >
+          {statuses.map((option) => (
+            <MenuItem key={option.value} value={option.value}>
+              {option.label}
+            </MenuItem>
+          ))}
+        </TextField>
+        <TextField
+          label="Category"
+          name="categoria"
+          value={campaign.categoria}
+          onChange={handleChange}
+          fullWidth
+          required
+          margin="normal"
+        />
+        <Box mt={2}>
+          <Button type="submit" variant="contained" color="primary">
+            Update
+          </Button>
+        </Box>
       </form>
-    </div>
+    </Layout>
   );
 }
