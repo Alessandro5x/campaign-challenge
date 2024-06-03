@@ -123,6 +123,7 @@ Localização: __tests__/validators.test.js
  - Teste de validação de campanha: Verifica se uma campanha válida passa na validação.
  - Teste de invalidação de campanha: Verifica se uma campanha com data de fim anterior à data de início não passa na validação.
  - Teste de expiração de campanha: Verifica se uma campanha é marcada como expirada se a data de fim for anterior à data atual.
+
 Testes de API de Campanhas
 Localização: __tests__/campaigns.test.js
  - Listar todas as campanhas: Verifica se a lista de campanhas é retornada corretamente.
