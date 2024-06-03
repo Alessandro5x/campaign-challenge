@@ -73,14 +73,14 @@ Acesse a aplicação em http://localhost:3000.
 
 ## Rotas da API
  ### Listar todas as campanhas
-    URL: /api/campaigns
-    Método: GET
-    Descrição: Retorna uma lista de todas as campanhas.
+URL: /api/campaigns
+Método: GET
+Descrição: Retorna uma lista de todas as campanhas.
 
 ### Criar uma nova campanha
-    URL: /api/campaigns
-    Método: POST
-    Corpo da Requisição:
+URL: /api/campaigns
+Método: POST
+Corpo da Requisição:
     {
         "nome": "Campanha de Teste",
         "dataInicio": "2024-06-10",
@@ -90,13 +90,13 @@ Acesse a aplicação em http://localhost:3000.
     }
 
 ### Obter uma campanha específica
-    URL: /api/campaigns/:id
-    Método: GET
-    Descrição: Retorna os detalhes de uma campanha específica.
+URL: /api/campaigns/:id
+Método: GET
+Descrição: Retorna os detalhes de uma campanha específica.
 ### Atualizar uma campanha específica
-    URL: /api/campaigns/:id
-    Método: PUT
-    Corpo da Requisição:
+URL: /api/campaigns/:id
+Método: PUT
+Corpo da Requisição:
     {
         "nome": "Campanha Atualizada",
         "dataInicio": "2024-06-11",
@@ -105,29 +105,29 @@ Acesse a aplicação em http://localhost:3000.
         "categoria": "vendas"
     }
 ### Excluir uma campanha específica (soft delete)
-    URL: /api/campaigns/:id
-    Método: DELETE
-    Descrição: Marca a campanha como deletada.
+URL: /api/campaigns/:id
+Método: DELETE
+Descrição: Marca a campanha como deletada.
 
 ## Documentação da API
-    A documentação da API está disponível em http://localhost:3000/api-docs.
+A documentação da API está disponível em http://localhost:3000/api-docs.
 
 ## Testes
-    Para rodar os testes, utilize o comando:
+Para rodar os testes, utilize o comando:
 ```bash
     npm test
 ```
 ### Testes Incluídos
-    Testes de Validação
-    Localização: __tests__/validators.test.js
-        Teste de validação de campanha: Verifica se uma campanha válida passa na validação.
-        Teste de invalidação de campanha: Verifica se uma campanha com data de fim anterior à data de início não passa na validação.
-        Teste de expiração de campanha: Verifica se uma campanha é marcada como expirada se a data de fim for anterior à data atual.
-    Testes de API de Campanhas
-    Localização: __tests__/campaigns.test.js
-        Listar todas as campanhas: Verifica se a lista de campanhas é retornada corretamente.
-        Criar uma nova campanha: Verifica se uma nova campanha é criada corretamente.
-        Atualizar uma campanha existente: Verifica se uma campanha existente é atualizada corretamente.
-        Excluir uma campanha (soft delete): Verifica se uma campanha é marcada como deletada corretamente.
+Testes de Validação
+Localização: __tests__/validators.test.js
+    Teste de validação de campanha: Verifica se uma campanha válida passa na validação.
+    Teste de invalidação de campanha: Verifica se uma campanha com data de fim anterior à data de início não passa na validação.
+    Teste de expiração de campanha: Verifica se uma campanha é marcada como expirada se a data de fim for anterior à data atual.
+Testes de API de Campanhas
+Localização: __tests__/campaigns.test.js
+    Listar todas as campanhas: Verifica se a lista de campanhas é retornada corretamente.
+    Criar uma nova campanha: Verifica se uma nova campanha é criada corretamente.
+    Atualizar uma campanha existente: Verifica se uma campanha existente é atualizada corretamente.
+    Excluir uma campanha (soft delete): Verifica se uma campanha é marcada como deletada corretamente.
 ### Contribuições
-    Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
+Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
