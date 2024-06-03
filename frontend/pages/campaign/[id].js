@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import axios from 'axios';
+import { Button, Typography, Box } from '@mui/material';
+import Layout from '../../components/Layout';
 
 export default function Campaign() {
   const router = useRouter();
@@ -24,14 +26,22 @@ export default function Campaign() {
   if (!campaign) return <div>Loading...</div>;
 
   return (
-    <div>
-      <h1>{campaign.nome}</h1>
-      <p>Status: {campaign.status}</p>
-      <p>Category: {campaign.categoria}</p>
-      <p>Start Date: {new Date(campaign.dataInicio).toLocaleDateString()}</p>
-      <p>End Date: {new Date(campaign.dataFim).toLocaleDateString()}</p>
-      <button onClick={handleDelete}>Delete</button>
-      <button onClick={() => router.push(`/edit/${id}`)}>Edit</button>
-    </div>
+    <Layout>
+      <Typography variant="h4" gutterBottom>
+        {campaign.nome}
+      </Typography>
+      <Typography>Status: {campaign.status}</Typography>
+      <Typography>Category: {campaign.categoria}</Typography>
+      <Typography>Start Date: {new Date(campaign.dataInicio).toLocaleDateString()}</Typography>
+      <Typography>End Date: {new Date(campaign.dataFim).toLocaleDateString()}</Typography>
+      <Box mt={2}>
+        <Button variant="contained" color="secondary" onClick={handleDelete} sx={{ mr: 2 }}>
+          Delete
+        </Button>
+        <Button variant="contained" color="primary" onClick={() => router.push(`/edit/${id}`)}>
+          Edit
+        </Button>
+      </Box>
+    </Layout>
   );
 }
