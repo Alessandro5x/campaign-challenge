@@ -87,7 +87,7 @@ frontend/
 ├── public/
 ├── utils/
 │   ├── axios.js
-│   └── validators.js
+│   └── theme.js
 ├── .gitignore
 ├── jest.config.js
 ├── jest.setup.js

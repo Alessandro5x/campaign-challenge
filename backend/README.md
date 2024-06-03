@@ -5,11 +5,11 @@
 Este projeto é uma aplicação de gerenciamento de campanhas, desenvolvida utilizando Node.js com Next.js para o backend. A aplicação permite a criação, leitura, atualização e exclusão (soft delete) de campanhas, além de fornecer uma documentação da API usando Swagger.
 
 ## Estrutura de Pastas
-
-campaign-challenge/
+```
+backend/
 ├── tests/
 │ ├── campaigns.test.js
-│ └── validators.test.js
+│ └── validator.test.js
 ├── data/
 │ └── campaigns.js
 ├── node_modules/
@@ -21,7 +21,7 @@ campaign-challenge/
 │ └── api-docs.js
 ├── public/
 ├── utils/
-│ └── validators.js
+│ └── validator.js
 ├── .gitignore
 ├── jest.config.js
 ├── next.config.mjs
@@ -29,7 +29,7 @@ campaign-challenge/
 ├── package-lock.json
 ├── README.md
 ├── server.js
-
+```
 
 ## Funcionalidades
 
@@ -119,7 +119,7 @@ Para rodar os testes, utilize o comando:
 ```
 ### Testes Incluídos
 Testes de Validação
-Localização: __tests__/validators.test.js
+Localização: __tests__/validator.test.js
  - Teste de validação de campanha: Verifica se uma campanha válida passa na validação.
  - Teste de invalidação de campanha: Verifica se uma campanha com data de fim anterior à data de início não passa na validação.
  - Teste de expiração de campanha: Verifica se uma campanha é marcada como expirada se a data de fim for anterior à data atual.
