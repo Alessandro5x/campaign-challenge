@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "c23c0d9f-f89f-4ced-b63a-b50629d4901f",
+		"name": "Campaign Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21713742"
+	},
+	"item": [
+		{
+			"name": "New campaign",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Test campaign\",\r\n  \"dataInicio\": \"2024-06-10\",\r\n  \"dataFim\": \"2024-06-20\",\r\n  \"status\": \"ativa\",\r\n  \"categoria\": \"marketing\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/campaigns",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"campaigns"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get campaigns",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Test campaign\",\r\n  \"dataInicio\": \"2024-06-10\",\r\n  \"dataFim\": \"2024-06-20\",\r\n  \"status\": \"ativa\",\r\n  \"categoria\": \"marketing\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/campaigns",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"campaigns"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete campaign",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Campanha de Teste\",\r\n  \"dataInicio\": \"2024-06-10\",\r\n  \"dataFim\": \"2024-06-20\",\r\n  \"status\": \"ativa\",\r\n  \"categoria\": \"marketing\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/campaigns/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"campaigns",
+						"0"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
